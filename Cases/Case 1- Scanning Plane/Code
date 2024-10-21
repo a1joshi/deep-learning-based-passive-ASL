@@ -22,7 +22,7 @@ scanning_grid = grid_length*grid_length
 training_samples = 50000
 val_samples = 10000
 pred_samples = 1
-frequency = 100
+frequency = 300
 no_of_epochs = 100
 bs = 64
 
@@ -181,7 +181,7 @@ plt.show()
 
 ####################################################################################
 
-# Prediction statistics for 100 samples
+# Prediction statistics for 1000 samples
 
 from matplotlib import colorbar
 
@@ -225,24 +225,5 @@ for i in range(1000):
     c5 = c5 + 1
   if counter == 6:
     c6 = c6 + 1
-
-#   print('Sources detected =',counter)
-#   z1 = z1.reshape(grid_length,grid_length)
-#   k1 = k1.reshape(grid_length,grid_length)
-
-#   fig , (ax1 , ax2)  = plt.subplots(1,2)
-#   im1 = ax1.imshow(k1)
-#   plt.colorbar(im1, ax=ax1, shrink = 0.35)
-#   # ax1.set_title('Ground Truth 6 Sources at 300 Hz')
-
-
-#   im2 = ax2.imshow(z1)
-# # plt.colorbar(im1, ax=ax2)
-#   plt.colorbar(im1,ax=ax2, shrink=0.35)
-#   # ax2.set_title('CNN Prediction 6 Sources at 300 Hz')
-
-# # plt.figure(figsize = (10,10))
-#   fig.set_size_inches(10, 10)
-#   plt.show()
 
 print('0S detected:',c0,'1S detected:',c1,'2S detected:',c2,'3S detected:',c3,'4S detected:',c4,'5S detected:',c5,'6S detected:',c6)
